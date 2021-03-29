@@ -70,7 +70,7 @@ publishing {
             pom {
                 name = 'SLGL Java client library'
                 description = 'Java client library for SLGL API'
-                url = 'https://github.com/sigia/slgl-java'
+                url = 'https://github.com/sigia-com/slgl-java'
                 licenses {
                     license {
                         name = 'MIT license'
@@ -84,9 +84,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection = 'scm:git:git@github.com:sigia/slgl-java.git'
-                    developerConnection = 'scm:git:git@github.com:sigia/slgl-java.git'
-                    url = 'https://github.com/sigia/slgl-java'
+                    connection = 'scm:git:git@github.com:sigia-com/slgl-java.git'
+                    developerConnection = 'scm:git:git@github.com:sigia-com/slgl-java.git'
+                    url = 'https://github.com/sigia-com/slgl-java.git'
                 }
             }
         }
