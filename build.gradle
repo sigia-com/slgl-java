@@ -63,7 +63,7 @@ publishing {
         mavenJava(MavenPublication) {
             groupId = 'io.slgl'
             artifactId = 'slgl-java'
-            version = '0.0.1'
+            version = '1.0.0'
 
             from components.java
 
