@@ -10,8 +10,15 @@ java {
 }
 
 test {
+    useJUnitPlatform()
+
     maxHeapSize = '512m'
     maxParallelForks(Runtime.getRuntime().availableProcessors())
+
+    afterSuite { desc, result ->
+        def timeElapsed = (result.endTime - result.startTime) / 1000
+        logger.lifecycle("Tests run: ${result.testCount}, Failures: ${result.failedTestCount}, Skipped: ${result.skippedTestCount}, Time elapsed: ${timeElapsed} sec")
+    }
 }
 
 repositories {
