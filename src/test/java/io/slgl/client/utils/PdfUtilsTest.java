@@ -3,15 +3,23 @@ package io.slgl.client.utils;
 import io.slgl.client.utils.PdfUtils.PdfFileRange;
 import io.slgl.client.utils.PdfUtils.PdfVisualContentDescription;
 import org.apache.commons.io.IOUtils;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.security.Security;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PdfUtilsTest {
+
+    @BeforeAll
+    public static void setup() {
+        Security.addProvider(new BouncyCastleProvider());
+    }
 
     @Test
     public void shouldReturnPdfContentHash() throws Exception {
